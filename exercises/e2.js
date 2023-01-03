@@ -6,6 +6,10 @@ import { data } from "../data/data";
 
 export function getAsteroidNames(data) {
   // Your code goes here...
+  const bigRocks = data.asteroids;
+  const asteroidsNames = bigRocks.map((rock) => rock.name);
+  console.log(asteroidsNames);
+  return asteroidsNames;
 }
 
 

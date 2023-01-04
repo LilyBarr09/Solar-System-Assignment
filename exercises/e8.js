@@ -4,8 +4,13 @@ import { data } from "../data/data";
 // Return a Planet name by a given moon name
 // Return example: 'Planet Name'
 
-export function findPlanetNameByMoon(data, moonName) {
+export function findPlanetNameByMoon({planets}, moonName) {
   // Your code goes here...
+  
+  return planets.find((planet) => planet.moons.includes(moonName)).name;
+
+
+
 }
 
 

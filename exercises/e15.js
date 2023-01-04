@@ -4,8 +4,14 @@ import { data } from "../data/data";
 // Return an array of Planets' names without moons
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function getPlanetsWithNoMoons(data) {
+export function getPlanetsWithNoMoons({planets}) {
   // Your code goes here...
+  return planets.reduce((acc, planet) => {
+		if(!planet.moonsCount) {
+			return [...acc, planet.name];
+		}
+		return acc;
+	}, [])
 }
 
 

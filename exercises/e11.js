@@ -4,8 +4,14 @@ import { data } from "../data/data";
 // Return an array of Planets' names with less than 10 moons
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function lowMoonsPlanets(data) {
+export function lowMoonsPlanets({planets}) {
   // Your code goes here...
+  return planets.reduce((acc, planet) => {
+    if(planet.moonsCount < 10) {
+      return [...acc, planet.name]
+    }
+    return acc;
+  }, []);
 }
 
 
